@@ -18,7 +18,7 @@ public Plugin myinfo = {
     name = "N2E Secret Calculator",
     author = "koen",
     description = "Calculates the secret trigger code on ze_noob_too_easy_v3",
-    version = "1.0",
+    version = "1.0.1",
     url = "https://steamcommunity.com/id/fungame1224/",
 }
 
