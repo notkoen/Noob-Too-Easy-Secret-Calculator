@@ -10,6 +10,9 @@ SourceMod plugin for calculating the secret on ze_noob_too_easy_v3. The trigger 
 - Add README.md
 - Include information about original vscript function
 
+## Version 1.1.0
+- Add a check to make sure input is a number (Thanks [Detroid](https://steamcommunity.com/id/2132423]))
+
 # Original VScript Function:
 ```Squirrel
 ::bk <- 100;

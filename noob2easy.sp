@@ -18,7 +18,7 @@ public Plugin myinfo = {
     name = "N2E Secret Calculator",
     author = "koen",
     description = "Calculates the secret trigger code on ze_noob_too_easy_v3",
-    version = "1.0.1",
+    version = "1.1.0",
     url = "https://steamcommunity.com/id/fungame1224/",
 }
 
@@ -41,6 +41,11 @@ public Action Command_Noob2Easy(int client, int args) {
     
     if(strlen(sBuffer) > 0)
         chars = StringToIntEx(sBuffer, input);
+        
+    if(input == 0) {
+        CReplyToCommand(client, "{darkred}[{green}N2E Calculator{darkred}]{default} You must enter a number");
+        return Plugin_Handled;
+    }
     
     if(input < 100)
         input = input * 10;
