@@ -2,16 +2,19 @@
 SourceMod plugin for calculating the secret on ze_noob_too_easy_v3. The trigger involves using activator's HP to determine what the correct code should be.
 
 # Changelogs
-## Version 1.0
+### Version 1.0
 - Initial commit
 
-## Version 1.0.1
+### Version 1.0.1
 - Add missing include file
 - Add README.md
 - Include information about original vscript function
 
-## Version 1.1.0
+### Version 1.1.0
 - Add a check to make sure input is a number (Thanks [Detroid](https://steamcommunity.com/id/2132423]))
+
+### Version 1.1.1
+- Removed Colored Chat dependency (Unnecessary)
 
 # Original VScript Function:
 ```Squirrel

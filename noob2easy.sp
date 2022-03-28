@@ -2,7 +2,6 @@
 #pragma semicolon 1
 
 #include <sourcemod>
-#include <csgocolors_fix>
 
 int DES[10] = {1,3,6,5,4,8,0,9,2,7};
 int IPB[64] = {57,49,41,33,25,17, 9,1,
@@ -18,7 +17,7 @@ public Plugin myinfo = {
     name = "N2E Secret Calculator",
     author = "koen",
     description = "Calculates the secret trigger code on ze_noob_too_easy_v3",
-    version = "1.1.0",
+    version = "1.1.1",
     url = "https://steamcommunity.com/id/fungame1224/",
 }
 
@@ -29,7 +28,7 @@ public void OnPluginStart() {
 public Action Command_Noob2Easy(int client, int args) {
     
     if(args == 0) {
-        CReplyToCommand(client, "{darkred}[{green}N2E Calculator{darkred}]{red} Usage: {default}sm_n2e <Your HP>");
+        ReplyToCommand(client, "[N2E Calculator] Usage: sm_n2e <Your HP>");
         return Plugin_Handled;
     }
     
@@ -43,7 +42,7 @@ public Action Command_Noob2Easy(int client, int args) {
         chars = StringToIntEx(sBuffer, input);
         
     if(input == 0) {
-        CReplyToCommand(client, "{darkred}[{green}N2E Calculator{darkred}]{default} You must enter a number");
+        ReplyToCommand(client, "[N2E Calculator] You must enter a number");
         return Plugin_Handled;
     }
     
@@ -58,6 +57,6 @@ public Action Command_Noob2Easy(int client, int args) {
     
     int bk = IPB[DES[b1]] * IPB[DES[b2]] * IPB[DES[b3]] + IPB[DES[b1]] + IPB[DES[b2]] + IPB[DES[b3]] +IPB[DES[(b1+b2+b3)%10]];
     
-    CReplyToCommand(client, "{darkred}[{green}N2E Calculator{darkred}] {default}Your secret code is: {orange}%i", bk);
+    ReplyToCommand(client, "[N2E Calculator] Your secret code is: %i", bk);
     return Plugin_Continue;
 }
