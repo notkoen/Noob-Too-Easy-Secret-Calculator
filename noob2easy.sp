@@ -21,13 +21,15 @@ public Plugin myinfo = {
     url = "https://steamcommunity.com/id/fungame1224/",
 }
 
-public void OnPluginStart() {
+public void OnPluginStart()
+{
     RegConsoleCmd("sm_n2e", Command_Noob2Easy, "Calculate the secret code for Noob Too Easy v3 Trigger");
 }
 
-public Action Command_Noob2Easy(int client, int args) {
-    
-    if(args == 0) {
+public Action Command_Noob2Easy(int client, int args)
+{
+    if(args == 0)
+    {
         ReplyToCommand(client, "[N2E Calculator] Usage: sm_n2e <Your HP>");
         return Plugin_Handled;
     }
@@ -41,7 +43,8 @@ public Action Command_Noob2Easy(int client, int args) {
     if(strlen(sBuffer) > 0)
         chars = StringToIntEx(sBuffer, input);
         
-    if(input == 0) {
+    if(input == 0)
+    {
         ReplyToCommand(client, "[N2E Calculator] You must enter a number");
         return Plugin_Handled;
     }
