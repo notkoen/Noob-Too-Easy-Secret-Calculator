@@ -1,6 +1,8 @@
 # ze_Noob_Too_Easy_v3 Secret Trigger Calculator
 SourceMod plugin for calculating the secret on ze_noob_too_easy_v3. The trigger involves using activator's HP to determine what the correct code should be.
 
+Compiled in Sourcemod 1.11
+
 # Changelogs
 ### Version 1.0
 - Initial commit
@@ -15,6 +17,9 @@ SourceMod plugin for calculating the secret on ze_noob_too_easy_v3. The trigger 
 
 ### Version 1.1.1
 - Removed Colored Chat dependency (Unnecessary)
+
+### Version 1.1.2
+- Update code formatting and add comments
 
 # Original VScript Function:
 ```Squirrel
